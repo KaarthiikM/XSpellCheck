@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 
-// Define a custom dictionary of words and their corrections
 const customDictionary = {
   teh: "the",
   wrok: "work",
   fot: "for",
   exampl: "example"
-  // Add more word-correction pairs as needed
 };
 
 function SpellCheckApp() {
@@ -17,7 +15,7 @@ function SpellCheckApp() {
     const text = e.target.value;
     setInputText(text);
 
-    // Implement a basic spelling check and correction
+
     const words = text.split(" ");
     const correctedWords = words.map((word) => {
       const correctedWord = customDictionary[word.toLowerCase()];
@@ -26,7 +24,7 @@ function SpellCheckApp() {
 
     const correctedText = correctedWords.join(" ");
 
-    // Set the suggested text (first corrected word)
+    
     const firstCorrection = correctedWords.find(
       (word, index) => word !== words[index]
     );
